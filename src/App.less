@@ -51,6 +51,7 @@ body {
     width: 120px;
     margin: 20px auto;
     padding: 5px;
+
     input {
         appearance: none;
         background-color: grey;
@@ -76,23 +77,47 @@ body {
 
     &.halt-go,
     &.halt-stop {
-        input.yellow {
-            background-color: #FFFF00;
-            box-shadow: 0 0 6em #ffff33;
+        input {
+
+            &.red,
+            &.green {
+                opacity: 0.2;
+            }
+
+            &.yellow {
+                background-color: #FFFF00;
+                box-shadow: 0 0 6em #ffff33;
+            }
         }
     }
 
     &.go {
-        input.green {
-            background-color: #00FF00;
-            box-shadow: 0 0 6em #33ff33;
+        input {
+
+            &.red,
+            &.yellow {
+                opacity: 0.2;
+            }
+
+            &.green {
+                background-color: #00FF00;
+                box-shadow: 0 0 6em #33ff33;
+            }
         }
     }
 
     &.stop {
-        input.red {
-            background-color: #FF0000;
-            box-shadow: 0 0 6em #ff3333;
+        input {
+
+            &.yellow,
+            &.green {
+                opacity: 0.2;
+            }
+
+            &.red {
+                background-color: #FF0000;
+                box-shadow: 0 0 6em #ff3333;
+            }
         }
     }
 
